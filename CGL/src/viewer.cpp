@@ -249,7 +249,7 @@ void Viewer::resize_callback( GLFWwindow* window, int width, int height ) {
 void Viewer::cursor_callback( GLFWwindow* window, double xpos, double ypos ) {
 
   // get keydown bitmask
-  unsigned char keys;
+  unsigned char keys = 0;
   keys  |= (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT)   == GLFW_PRESS);
   keys <<= 1;
   keys  |= (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_MIDDLE) == GLFW_PRESS);
